@@ -1,0 +1,20 @@
+
+<!-- MDB -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript">
+
+console.log('header scrolling height');
+
+// $(function() {$("#includedContent").load("header.html"); })
+
+// setTimeout(function(){
+    
+    console.log($('.main-nav-sec').scrollHeight);
+    $('body').css('padding-top',(parseFloat($('.main-nav-sec').css("height"))+10))
+// },200)
+
+$('.carousel-inner img').css('height',$($('#bodycontainer1')[0]).css('height'))
+
+
+</script>
