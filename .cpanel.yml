@@ -1,4 +1,0 @@
----
-deployment:
-  tasks:
-    - source /home/unisonsa/nodevenv/repositories/P-1-Unison-Automation-Engineering/14/bin/activate && cd /home/unisonsa/repositories/P-1-Unison-Automation-Engineering
