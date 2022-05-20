@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<%- include('resources/html/head') %>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+#logo {
+    background-color:white !important;
+    animation:animatefadein 0.5s;
+    animation-delay:1.5s;
+}
+
+@keyframes animatefadein
+{
+    from
+    {
+        opacity:0
+    } to
+    {
+        opacity:1
+    }
+}
+
+#mainCard{
+    animation-name: backgroundcolorchange;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    border: 1px inset;
+    background-color: rgba(0,0,0,0.5);
+    position:relative;
+    animation:animatetop 1.5s
+}
+
+@keyframes animatetop
+{
+    from
+    {
+        top:-300px;opacity:0
+    } to
+    {
+        top:0;opacity:1
+    }
+}
+
+#letsExploreBtn{
+    position:relative;
+    visibility:hidden;
+    animation:animateExploreBtn 0.5s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+}
+
+
+@keyframes animateExploreBtn
+{
+    from
+    {
+        bottom:-50px;
+        visibility:hidden;
+    } to
+    {
+        bottom:0px;
+        visibility:visible;
+    }
+}
+
+body{
+  /* The image used */
+  background-image: url("docs/images/Others/11.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@keyframes backgroundcolorchange{
+    0%{
+        border-color: #ffffff;
+    }
+    25%{
+        border-color: #00ff73;
+    }
+    50%{
+        border-color: #4000ff;
+    }
+    75%{
+        border-color: #fff700;
+    }
+    100%{
+        border-color: #00aeff;
+    }
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="bg">    
+    <div class ="fixed-top main-nav-sec bg-transparent">
+        <div class="navbar navbar-expand-lg">
+          
+          <div class="container">
+            
+            <!-- Navbar brand -->
+            <ul class="navbar-nav d-flex flex-row me-1">
+              <li class="nav-item me-3 me-lg-0">
+                <a class="navbar-brand" href="home">
+                  <img src="./docs/images/UAE-logo.png" id="logo" style = "border: 5px outset #14b3d1" alt="" width="83" height="74"> 
+                </a>
+              </li>
+            </ul>
+
+    
+                <!-- Search -->
+                <!-- <ul class="navbar-nav d-flex flex-row me-1">
+                  <form class="w-auto">
+                    <input type="search" class="form-control" placeholder="Type query" aria-label="Search">
+                  </form> 
+                </ul> -->
+          </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row ">
+            <div class="card col-sm-6 shadow-lg p-3 mb-5 text-light rounded" id="bodycontainer1" style=" background-color:transparent">
+                
+                <div id = "mainCard" class="card-body container">
+                    <div class="row">
+                        <div class="">
+                            <span class="card-title text-md-left display-5" > Welcome To Unison Automation Engineering</span>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="">
+                            <span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <br /><br /><br /><br /><br /><br /><br>
+                    <div class="row" id="button-rows">
+                        <div class="col-sm-4"> </div>
+                        <div class="col-sm-4"> </div>
+                        <button type="button" id="letsExploreBtn" class="btn btn-info col-sm-4">
+                            <a href="home" class="text-dark ">
+                                <span class="">
+                                    Let's Explore!
+                                </span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<%- include('resources/js/script'); %>
+
+</body>
+</html>

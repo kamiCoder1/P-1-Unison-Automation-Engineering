@@ -9,8 +9,12 @@ app.use(express.static(__dirname+"\\public"));
 
 app.use('/',(req, res, next)=>{
     console.log("app.use() session check");
-    next();
+    next()
 })
+
+app.get('/',(req, res) => {
+    res.render('clickThroughPage', { root: __dirname });
+});
 
 app.get('/about', (req, res) => {
     console.log("about us");
