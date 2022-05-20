@@ -43,7 +43,5 @@ app.get('/projects', (req, res) => {
     res.render('projects', { root: __dirname });
 });
 
-app.listen(port, ()=>{
-    console.log(`Example app listening on port ${port}`);
-});
+app.listen();
 
